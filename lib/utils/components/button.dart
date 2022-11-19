@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zekademy/utils/components/textStyle.dart';
+import 'package:zekademy/utils/components/text_style.dart';
 import 'package:zekademy/utils/components/constants.dart';
 
 class MyButton extends StatelessWidget {

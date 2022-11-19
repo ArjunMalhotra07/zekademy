@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:zekademy/views/bottom_bar.dart';
-import 'package:zekademy/views/pages/people.dart';
 
 void main() {
   runApp(const MyApp());

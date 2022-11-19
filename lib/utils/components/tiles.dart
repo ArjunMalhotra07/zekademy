@@ -1,8 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:zekademy/utils/components/button.dart';
-import 'package:zekademy/utils/components/textStyle.dart';
+import 'package:zekademy/utils/components/text_style.dart';
 import 'package:zekademy/views/pages/details.dart';
 
 import 'constants.dart';

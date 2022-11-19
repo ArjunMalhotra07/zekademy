@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zekademy/views/pages/create.dart';
-import 'package:zekademy/views/pages/creativity.dart';
+import 'package:zekademy/views/pages/activity.dart';
 import 'package:zekademy/views/pages/home.dart';
 import 'package:zekademy/views/pages/people.dart';
 import 'package:zekademy/views/pages/profile.dart';

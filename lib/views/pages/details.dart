@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zekademy/utils/components/textStyle.dart';
-
-import '../../utils/components/tiles.dart';
+import 'package:zekademy/utils/components/text_style.dart';
 import '../../utils/components/constants.dart';
 
 class DetailsPage extends StatelessWidget {
