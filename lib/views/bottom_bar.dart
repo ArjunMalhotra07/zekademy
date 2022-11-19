@@ -5,6 +5,8 @@ import 'package:zekademy/views/pages/home.dart';
 import 'package:zekademy/views/pages/people.dart';
 import 'package:zekademy/views/pages/profile.dart';
 
+import '../utils/components/app_bar.dart';
+
 class MyBottomNavigationBar extends StatefulWidget {
   const MyBottomNavigationBar({super.key});
 
@@ -31,18 +33,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 1,
-        leading: SizedBox(
-            height: 110.0,
-            width: 110.0, // fixed width and height
-            child: Image.asset('assets/Logo.png')),
-        actions: const [
-          Image(image: AssetImage('assets/Notification.jpg')),
-          Image(image: AssetImage('assets/Search.png'))
-        ],
-      ),
+      appBar: const MyCustomAppBar(height: 65),
       body: pages.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.purple,
