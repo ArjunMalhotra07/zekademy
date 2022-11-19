@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zekademy/utils/components/textStyle.dart';
-import 'package:zekademy/utils/constants.dart';
+import 'package:zekademy/utils/components/constants.dart';
 
 class MyButton extends StatelessWidget {
   final String text;

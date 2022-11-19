@@ -1,11 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:zekademy/utils/button.dart';
+import 'package:zekademy/utils/components/button.dart';
 import 'package:zekademy/utils/components/textStyle.dart';
 import 'package:zekademy/views/pages/details.dart';
 
-import '../constants.dart';
+import 'constants.dart';
 
 class CustomisedTile extends StatelessWidget {
   final String name;

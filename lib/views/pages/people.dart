@@ -1,33 +1,19 @@
-import 'dart:convert';
-import 'dart:math';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:zekademy/models/user_model.dart';
+import 'package:zekademy/utils/calls/apis.dart';
 import 'package:zekademy/utils/components/tiles.dart';
-import 'package:http/http.dart' as http;
 
-import '../../utils/constants.dart';
+import '../../utils/components/constants.dart';
 
 class PeopleBarPage extends StatelessWidget {
   const PeopleBarPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Future<List<UserModel>?> apiCall() async {
-      var response = await http
-          .get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
-      if (response.statusCode == 200) {
-        var data = json.decode(response.body) as List;
-        return data.map((e) => UserModel.fromJson(e)).toList();
-      }
-      return null;
-    }
-
     return Scaffold(
       backgroundColor: Constants.backGround,
       body: FutureBuilder(
-        future: apiCall(),
+        future: Api().getUserListFunction(),
         builder: (context, data) {
           if (data.hasData) {
             var incomingDataObjects = data.data as List<UserModel>;

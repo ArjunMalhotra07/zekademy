@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zekademy/utils/components/textStyle.dart';
 
 import '../../utils/components/tiles.dart';
-import '../../utils/constants.dart';
+import '../../utils/components/constants.dart';
 
 class DetailsPage extends StatelessWidget {
   final String name, userName, email, add, phone, website, pic;
