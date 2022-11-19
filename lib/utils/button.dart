@@ -21,13 +21,13 @@ class MyButton extends StatelessWidget {
           height: height ?? 50,
           decoration: BoxDecoration(
               color: Constants.whiteColor,
-              border: Border.all(width: 1, color: Constants.greyColor),
+              border: Border.all(width: 1, color: Constants.outline),
               borderRadius: BorderRadius.circular(5)),
           child: Center(
               child: CustomisedText(
             incomingText: text,
             colorOfText: Constants.purpleColor,
-            size: 18,
+            size: 13,
           )),
         ));
   }

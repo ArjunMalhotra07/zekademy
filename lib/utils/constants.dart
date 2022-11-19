@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Constants {
+  static const outline = Color.fromARGB(255, 238, 238, 238);
+  static const backGround = Color.fromARGB(255, 252, 252, 252);
   static const purpleColor = Colors.purple;
   static const whiteColor = Colors.white;
   static const blackColor = Colors.black;

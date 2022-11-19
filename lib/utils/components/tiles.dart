@@ -28,12 +28,12 @@ class CustomisedTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 8),
       child: Container(
           width: 50,
           height: 100,
           decoration: BoxDecoration(
-              border: Border.all(width: .7, color: Constants.greyColor),
+              border: Border.all(width: 1.5, color: Constants.outline),
               color: Constants.whiteColor,
               borderRadius: BorderRadius.circular(8)),
           child: Row(
@@ -56,21 +56,23 @@ class CustomisedTile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Constants.heightedBox(2),
                   SizedBox(
                     width: 150,
                     child: CustomisedText(
                       incomingText: name,
-                      size: 17,
+                      size: 16,
                       weight: FontWeight.w600,
                       colorOfText: Constants.blackColor,
                     ),
                   ),
                   CustomisedText(
                     incomingText: "@$userName",
-                    size: 15,
+                    size: 13,
                     colorOfText: Constants.greyColor,
                     weight: FontWeight.w400,
                   ),
+                  Constants.heightedBox(2),
                 ],
               ),
               Constants.wideBox(10),

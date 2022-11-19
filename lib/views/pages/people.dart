@@ -25,6 +25,7 @@ class PeopleBarPage extends StatelessWidget {
     }
 
     return Scaffold(
+      backgroundColor: Constants.backGround,
       body: FutureBuilder(
         future: apiCall(),
         builder: (context, data) {

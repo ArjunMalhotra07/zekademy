@@ -7,8 +7,6 @@ class ProfileBarPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Profile"),
-    );
+    return Center();
   }
 }
