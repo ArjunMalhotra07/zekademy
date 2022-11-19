@@ -35,12 +35,21 @@ class PeopleBarPage extends StatelessWidget {
                   var object = incomingDataObjects[index];
                   var name = object.name;
                   var username = object.username;
+                  var email = object.email;
+                  var phone = object.phone;
+                  var website = object.website;
+                  var address = object.address;
                   if (kDebugMode) {
                     print("");
                   }
                   return CustomisedTile(
                     userName: username.toString(),
                     name: name.toString(),
+                    email: email.toString(),
+                    address:
+                        "${address!.street}, ${address.suite}, ${address.city}, ${address.zipcode}",
+                    phone: phone.toString(),
+                    web: website.toString(),
                   );
                 }));
           } else if (data.hasError) {

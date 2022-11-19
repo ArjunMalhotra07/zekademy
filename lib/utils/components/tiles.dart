@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:zekademy/utils/button.dart';
 import 'package:zekademy/utils/components/textStyle.dart';
+import 'package:zekademy/views/pages/details.dart';
 
 import '../constants.dart';
 
 class CustomisedTile extends StatelessWidget {
   final String name;
   final String userName;
-  const CustomisedTile({required this.name, required this.userName, super.key});
+  final String? email;
+  final String? address;
+  final String? phone;
+  final String? web;
+  const CustomisedTile(
+      {required this.name,
+      required this.userName,
+      this.email,
+      this.address,
+      this.phone,
+      this.web,
+      super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,10 +63,26 @@ class CustomisedTile extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              const MyButton(
-                text: "View",
-                width: 85,
-                height: 42,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailsPage(
+                              name: name,
+                              userName: userName,
+                              website: web ?? "",
+                              phone: phone ?? "",
+                              email: email ?? "",
+                              add: address ?? "",
+                            )),
+                  );
+                },
+                child: const MyButton(
+                  text: "View",
+                  width: 85,
+                  height: 42,
+                ),
               ),
               Constants.wideBox(15),
             ],

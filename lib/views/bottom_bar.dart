@@ -39,8 +39,8 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             width: 110.0, // fixed width and height
             child: Image.asset('assets/Logo.png')),
         actions: const [
-          Image(image: AssetImage('assets/notifications.png')),
-          Image(image: AssetImage('assets/search.png'))
+          Image(image: AssetImage('assets/Notification.jpg')),
+          Image(image: AssetImage('assets/Search.png'))
         ],
       ),
       body: pages.elementAt(_selectedIndex),
