@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:zekademy/utils/button.dart';
 import 'package:zekademy/utils/components/textStyle.dart';
@@ -12,6 +14,7 @@ class CustomisedTile extends StatelessWidget {
   final String? address;
   final String? phone;
   final String? web;
+  final String pic;
   const CustomisedTile(
       {required this.name,
       required this.userName,
@@ -19,6 +22,7 @@ class CustomisedTile extends StatelessWidget {
       this.address,
       this.phone,
       this.web,
+      required this.pic,
       super.key});
 
   @override
@@ -37,10 +41,17 @@ class CustomisedTile extends StatelessWidget {
               Row(
                 children: [
                   Constants.wideBox(10),
-                  const Image(image: AssetImage('assets/Profile.png')),
+                  SizedBox(
+                    width: 75,
+                    height: 75,
+                    child: Image(
+                      image: AssetImage(pic),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
                 ],
               ),
-              Constants.wideBox(50),
+              Constants.wideBox(15),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,19 +60,20 @@ class CustomisedTile extends StatelessWidget {
                     width: 150,
                     child: CustomisedText(
                       incomingText: name,
-                      size: 20,
+                      size: 17,
                       weight: FontWeight.w600,
                       colorOfText: Constants.blackColor,
                     ),
                   ),
                   CustomisedText(
                     incomingText: "@$userName",
-                    size: 17,
-                    colorOfText: Constants.blackColor,
-                    weight: FontWeight.w200,
+                    size: 15,
+                    colorOfText: Constants.greyColor,
+                    weight: FontWeight.w400,
                   ),
                 ],
               ),
+              Constants.wideBox(10),
               const Spacer(),
               GestureDetector(
                 onTap: () {
@@ -69,6 +81,7 @@ class CustomisedTile extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (context) => DetailsPage(
+                              pic: pic,
                               name: name,
                               userName: userName,
                               website: web ?? "",

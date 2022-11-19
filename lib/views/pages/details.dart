@@ -5,7 +5,7 @@ import '../../utils/components/tiles.dart';
 import '../../utils/constants.dart';
 
 class DetailsPage extends StatelessWidget {
-  final String name, userName, email, add, phone, website;
+  final String name, userName, email, add, phone, website, pic;
   const DetailsPage(
       {required this.name,
       required this.userName,
@@ -13,6 +13,7 @@ class DetailsPage extends StatelessWidget {
       required this.phone,
       required this.add,
       required this.website,
+      required this.pic,
       super.key});
 
   @override
@@ -41,13 +42,15 @@ class DetailsPage extends StatelessWidget {
           child: Column(
             children: [
               Row(children: [
-                Row(
-                  children: [
-                    Constants.wideBox(10),
-                    const Image(image: AssetImage('assets/Profile.png')),
-                  ],
+                SizedBox(
+                  width: 75,
+                  height: 75,
+                  child: Image(
+                    image: AssetImage(pic),
+                    fit: BoxFit.fill,
+                  ),
                 ),
-                Constants.wideBox(50),
+                Constants.wideBox(20),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,

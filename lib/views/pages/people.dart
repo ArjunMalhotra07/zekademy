@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -39,8 +40,17 @@ class PeopleBarPage extends StatelessWidget {
                   var phone = object.phone;
                   var website = object.website;
                   var address = object.address;
-                  if (kDebugMode) {
-                    print("");
+                  var picture = "";
+                  if (index % 5 == 0) {
+                    picture = 'assets/pic1.png';
+                  } else if (index % 5 == 1) {
+                    picture = 'assets/pic2.png';
+                  } else if (index % 5 == 2) {
+                    picture = 'assets/pic3.png';
+                  } else if (index % 5 == 3) {
+                    picture = 'assets/pic4.png';
+                  } else {
+                    picture = 'assets/pic5.png';
                   }
                   return CustomisedTile(
                     userName: username.toString(),
@@ -50,6 +60,7 @@ class PeopleBarPage extends StatelessWidget {
                         "${address!.street}, ${address.suite}, ${address.city}, ${address.zipcode}",
                     phone: phone.toString(),
                     web: website.toString(),
+                    pic: picture,
                   );
                 }));
           } else if (data.hasError) {
