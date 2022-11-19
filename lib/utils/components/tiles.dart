@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:zekademy/utils/components/button.dart';
 import 'package:zekademy/utils/components/text_style.dart';
 import 'package:zekademy/views/pages/details.dart';
@@ -79,16 +80,19 @@ class CustomisedTile extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => DetailsPage(
-                              pic: pic,
-                              name: name,
-                              userName: userName,
-                              website: web ?? "",
-                              phone: phone ?? "",
-                              email: email ?? "",
-                              add: address ?? "",
-                            )),
+                    PageTransition(
+                        duration: const Duration(milliseconds: 700),
+                        reverseDuration: const Duration(milliseconds: 700),
+                        child: DetailsPage(
+                          pic: pic,
+                          name: name,
+                          userName: userName,
+                          website: web ?? "",
+                          phone: phone ?? "",
+                          email: email ?? "",
+                          add: address ?? "",
+                        ),
+                        type: PageTransitionType.rightToLeftWithFade),
                   );
                 },
                 child: const MyButton(
