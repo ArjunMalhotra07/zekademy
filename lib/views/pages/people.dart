@@ -13,7 +13,7 @@ class PeopleBarPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Constants.backGround,
       body: FutureBuilder(
-        future: Api().getUserListFunction(),
+        future: Api().getUserListFunction1(),
         builder: (context, data) {
           if (data.hasData) {
             var incomingDataObjects = data.data as List<UserModel>;
